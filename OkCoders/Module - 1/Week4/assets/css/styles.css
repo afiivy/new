@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Jost', sans-serif;
+    background-color: #f0ebda;
+
+}
+
+footer {position:relative;
+bottom: 0;
+padding-left: 20px;
+color: #502c35;
+font-size: 20px;
+}
+
+
+
+/* GENERAL STYLES */
+
+.navigation {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding-right: 20px;
+    margin-left: 20;
+}
+
+.logo {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 80rem;
+    margin-right: auto;
+    padding-bottom: 0;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.container {
+    display:flex ;
+    align-items: center;
+    background-color: #DA94A5;
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 0 0 0 2rem;
+}
+.container b{
+    align-items: right;
+    display: flex;
+}
+
+.main-heading {
+    font-size: 6rem;
+    color: #502c35;
+}
+
+.subheading {
+    color: #502c35;
+    font-size: 2rem;
+}
+
+
+.image {
+    height: 20rem;
+    margin-left: auto;
+    border-radius: 0 2rem 2rem 0;
+}
+
+
+/* jost-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jost-v15-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jost-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/jost-v15-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jost-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/jost-v15-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.dropbtn {
+    background-color: #502c35;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    
+  }
+   
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: #DA94A5;
+    border-radius: 12px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(218, 17, 17, 0.2);
+  }
+  
+.dropdown-content a {
+    color:  #502c35;
+    padding: 10px ;
+    max-width:auto;
+    
+    text-decoration:none;
+    display: block;
+
+  }
+
+
+.dropdown-content a:hover {background-color: #8f5a86;}
+  
+.dropdown:hover .dropdown-content {display:block;;}
+  
+.dropdown:hover .dropbtn {background-color: #391a44; }
+
+/*
+* Palette: 
+* https://coolors.co/da94a5-f6f5f2-f6f5f2-ecc5ce-f6f5f2-f1d4da-e4afbb-f0d2d8-e09ead-c96d84
+*/

@@ -1,0 +1,123 @@
+*{box-sizing: border-box;}
+
+body{background-color: #d4b2cf;}
+
+button{ 
+  color: white;
+  background-color: #672692;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* 
+.a{ padding: 1px;
+  background-color: rgb(166, 92, 92);
+  font-size: 70%;
+  
+  width: 20%;} */
+
+body, html{
+  height: 100%;
+}
+.darkcoffee{
+  background-image: url(darkcoffee.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hidden{ display: none;}
+
+.item-name{
+  font-size: medium;
+}
+
+.item-price{
+  font-size: medium;
+}
+
+.cart{
+  width: 50px; height: 50px;;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cart-item-name {
+  flex: 1;
+  margin-right: 1rem;
+}
+.cart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 1rem;
+}
+.cart-item-remove {
+  font-size: 0.8rem;
+  color: #ff6666;
+  cursor: pointer;
+}
+/* .menu-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(33.33% - 1rem);
+} */
+.navigation {
+  display: flex;
+  justify-content: right;
+  gap: 5px;
+  padding-right: 10px;}
+
+.picture{width: 100%;height: 100%;
+border-radius: 50px;
+padding-top: 20px;}
+
+h2{ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: white}
+
+.dropbtn {
+    background-color: #613480;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration:none;
+    display: block;
+  }
+
+  
+.dropdown-content a:hover {background-color: #8f5a86;}
+  
+.dropdown:hover .dropdown-content {display:block;}
+  
+.dropdown:hover .dropbtn {background-color: #391a44;}
+
+h1{ font-size:x-large;
+    color: #270202;  }

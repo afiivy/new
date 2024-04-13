@@ -1,0 +1,32 @@
+*{box-sizing: border-box;}
+
+body, html{
+    height: 100%;
+}
+
+.coffeelove{
+    background-image: url("coffees.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+h1{
+    color:wheat;
+    font-size: 37px;
+}
+nav{
+    display: flex;
+    justify-content: right;
+    font-size: smaller;
+    color: wheat;
+    gap: 10px;
+    font-size: 15px;
+}
+button{
+    background-color: wheat;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 15px; ;
+}

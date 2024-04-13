@@ -1,0 +1,38 @@
+DOM is built by the browser. We can create a new element to add to the DOM if needed.
+Persistant- if we are storing the infomation on a server somewhere to recall later.
+To call from the html- better to use an ID to be specific and not cause a bug and not call another element or class you don't want. 
+innerText- shows readable text and contnet text shows the script and everything else
+Qoutes are interchangable but if you open with a single quote should close with a single qoute. Use the opposite qoutes with you want them to show. You can use backslash to escape. 
+arr.push- adds an item to the list
+arr.pop - removes from the list
+arr.length-  number of contnet
+arr.shift and arr.unshift take up more memory
+
+3/13
+Functions
+//declaration
+function descriptionFunctionName(parameter names/types): return type { implementation}
+return type will be undefined.
+Function Expressions
+Arrow Functions
+const descriptiveOtherFunctionName= (comeParam) => {impelmentation return 'x';}
+You can call after you have declared them
+Escaping Characters
+"The man whispered, \"please speak to me.\""
+Special characters
+Quotes aren’t the only special characters that need to be escaped, there’s actually quite a few(opens in a new tab). However, to keep it simple, here’s a list of some common special characters in JavaScript.
+
+Code	Character
+\\	\ (backslash)
+"	'' (double quote)
+'	' (single quote)
+\n	newline
+\t	tab
+The last two characters listed in the table, newline \n and tab \t, are unique because they add additional whitespace to your Strings. A newline character will add a line break and a tab character will advance your line to the next tab stop(opens in a new tab).
+
+"Up up\n\tdown down"
+Returns:
+Up up
+ down down
+highlight text and then ctrl+forward slash to hide in html
+// forward slash for JavaScript

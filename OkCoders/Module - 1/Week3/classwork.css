@@ -1,0 +1,27 @@
+*{ box-sizing: border-box; padding: 100;}
+.container-2 {
+
+    display: flex;
+    width: 800px;
+    gap: 3px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+}
+
+.tag {
+    background-color: rgb(229, 251, 251);
+    border-radius: 12px;
+    padding: 4px ;
+    margin-top: 8px;
+    border: 1px solid rgb(250, 248, 248);
+    width: 120px;
+    text-align: center;
+    color: rgb(92, 137, 252);
+    
+    
+    
+    }
+    .tag:hover{ background-color: rgb(104, 133, 252); color: aliceblue;}
+

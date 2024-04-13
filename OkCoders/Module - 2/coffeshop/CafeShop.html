@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Coffee Shop</title>
+<head>
+    <body>        
+        
+
+        <h2>Coder's Cafe </h2>
+        
+        <div class="navigation">
+        <div class="menu"> 
+            <button id ="menu">Menu</button> 
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Locations</button> 
+
+            <div class="dropdown-content">
+            <a href="#">OKC</a> 
+            <a href="#">Tulsa</a>
+            <a href="#">Norman</a>
+            <a href="#">Moore</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            
+            <button class="dropbtn">Contact Us</button> 
+            <div class="dropdown-content">
+            <a href="#">Email</a> 
+            <a href="#">Telephone</a>
+            </div>
+            </div>
+
+        </div>
+        
+        <button id="login-btn">Login</button>
+
+        <img class="picture" src="darkcoffee.jpg" alt="coffee cup">
+
+        <footer> 
+            <div></div>
+            <div><p>Contact</p>
+            <div><p>About</p></div>
+        </footer>
+
+        <script>
+            const loginBtn = document.getElementById("login-btn");
+            const menu = document.getElementById("menu").onclick= function(){
+                location.href="menu.html";
+            }
+            //login info
+            loginBtn.addEventListener("click", () =>{
+                console.log("hello")
+            const name = prompt("Please enter your name:");
+            console.log("name",name);
+        if (name) {
+            loginBtn.innerText=name[0];
+            //const [firstName, lastName] = name.split(" ");
+            //loginBtn.classList.add("hidden");
+            }
+            });
+            
+            const addToCartBtns = document.querySelectorAll(".add-to-cart");
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            const cart = document.querySelector(".cart");
+            const cartItemsData = {};
+
+            addToCartBtns.forEach((btn)=> {btn.addEventListener("click",() => {
+                const menuItem = btn.closest(".menu-item");
+                const itemName = menuItem.querySelector(".item-name").innerText;
+                const itemPrice = menuItem.querySelector(".item-price").innerText;
+                if (cartItemsData[itemName]) {
+                    cartItemsData[itemName].quantity++;
+                } else { cartItemsData[itemName] = { price: itemPrice, quantity:1 };
+            }
+
+                updateCart();
+            });
+                
+            });
+
+            cartItems.addEventListener("click", (e) => {
+                if (e.target.classList.contains("cart-item-remove")) {
+                const itemName = e.target
+                .closest(".cart-item")
+                .querySelector(".cart-item-name").innerText;
+                delete cartItemsData[itemName];
+                updateCart();
+            }
+        });
+
+            function updateCart() {
+                cartItems.innerHTML="";
+                let totalItems = 0;
+                let totalPrice = 0;
+                for (let item in cartItemsData) {
+                    const cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+                    const itemName = document.createElement("div");
+                    itemName.classList.add("cart-item-name");
+                    itemName.innerText = item;
+                    const itemPrice = document.createElement("div");
+                    itemPrice.classList.add("cart-item-price");
+                    itemPrice.innerText = cartItemsData[item].price;
+                    const itemQuantity = document.createElement("div");
+                    itemQuantity.classList.add("cart-item-quantity");
+                    itemQuantity.innerText = cartItemsData[item].quantity;
+                    const itemRemoveBtn = document.createElement("button");
+                    itemRemoveBtn.classList.add("cart-item-remove");
+                    itemRemoveBtn.innerText = "Remove";
+                    cartItem.appendChild(itemName);
+                    cartItem.appendChild(itemPrice);
+                    cartItem.appendChild(itemQuantity);
+                    cartItems.appendChild(cartItem);
+                    cartItem.appendChild(itemRemoveBtn);
+                    totalItems += cartItemsData[item].quantity;
+                    cartItemsData[item].quantity;
+                    totalPrice += parseFloat(cartItemsData[item].price.slice(1)) *
+                    cartItemsData[item].quantity;
+                }
+                cartTotal.innerText = `Total: $
+                    $(totalPrice.toFixed(2)} (${totalItems} items)`;
+                    if (totalItems > 0) {
+                        cart.classList.remove("hidden");
+                    } else {
+                        cart.classList.add("hidden");
+                }
+
+            }
+
+
+        
+            
+        </script>
+    </body>
+</html>

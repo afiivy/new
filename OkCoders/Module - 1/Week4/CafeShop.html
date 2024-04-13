@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Coffee Shop</title>
+<head>
+    <body>        
+        
+
+        <h2>Coder's Cafe </h2>
+        
+        
+        <div class="navigation">
+        <div class="menu"> 
+            <button id ="menu">Menu</button> 
+            <!-- <div class="dropdown-content">
+            <a href="#">Espresso <div class="order"> <span> 2.99</span></span></div></a> 
+            <button id="Cappucino-btn">Cappucino</button>
+            <a href="#">Caramel Macchiato</a>
+            <a href="#">Pumpkin Spice</a> 
+            </div> -->
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Order</button> 
+            <div class="dropdown-content">
+            <a href="#">Delivery</a> 
+            <a href="#">Pick-up</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Locations</button> 
+
+            //<div class="dropdown-content">
+            <a href="#">OKC</a> 
+            <a href="#">Tulsa</a>
+            <a href="#">Norman</a>
+            <a href="#">Moore</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            
+            <button class="dropbtn">Contact Us</button> 
+            <div class="dropdown-content">
+            <a href="#">Email</a> 
+            <a href="#">Telephone</a>
+            </div>
+            </div>
+
+        <button id="login-btn">Login</button>
+        </div>
+
+
+        
+       <img class="picture"   src="coffee-6351116_1280.jpg" alt="coffee cup">
+       <div class="imgae slider"> </div>
+
+        <footer> 
+            <div></div>
+            <div> <p>Contact</p> </div>
+            <div><p>About</p></div>
+        </footer>
+        <script>
+            
+        
+            const loginBtn = document.getElementById("login-btn");
+            const menu = document.getElementById(Menu);
+        
+            
+
+            loginBtn.addEventListener("click", () =>{
+            const name = prompt("Please enter your name:");
+            console.log("name",name)
+        if (name) {
+            loginBtn.innerText=name[0];
+            //const [firstName, lastName] = name.split(" ");
+            //loginBtn.classList.add("hidden");
+        }
+            });
+
+            
+        </script>
+    </body>
+</html>

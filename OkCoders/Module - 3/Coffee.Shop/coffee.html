@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />    
+    <title>Coffee Shop</title>
+<head>
+    <body style="background-color: black;">
+    
+        <h1>Code and Coffee</h1>
+        <nav>
+            <button id="menu">Menu</button>
+            <button id="locations">Locations</button>
+            <button id="login-btn">Login</button>
+        </nav>
+        <img class="coffeelove" src="coffees.jpg" >
+
+        <script>
+            const menu = document.getElementById("menu").onclick= function(){
+                location.href="menu.html";}
+            const loginBtn = document.getElementById("login-btn");
+            const userAvatar = document.getElementById("user-avatar");
+            loginBtn.addEventListener("click", () =>{
+            const name = prompt("Please enter your name:");
+        if (name) {
+            loginBtn.innerText=name[0];
+            const [firstName, lastName] = name.split(" ");
+            const avatar = `${firstName[0]}${lastName[0]}`;
+            userAvatar.innerText = avatar.toUpperCase();
+            userAvatar.classList.remove("hidden");
+            loginBtn.classList.add("hidden")
+
+        
+            }
+            });
+
+    
+        </script>
+        </body>

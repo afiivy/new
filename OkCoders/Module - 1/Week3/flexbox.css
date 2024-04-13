@@ -1,0 +1,5 @@
+*{ box-sizing: border-box;}
+.container{ display:flex;
+border: 1px solid black; background-color: blue; gap:10px;}
+.item {border:1px solid black;
+background-color: cyan; padding: 5px;}
